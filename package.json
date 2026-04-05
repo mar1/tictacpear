@@ -1,0 +1,27 @@
+{
+  "name": "tictacpear",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "pear run --dev .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "Peer-to-peer TicTacToe game built with Pear",
+  "pear": {
+    "name": "TicTacPear",
+    "gui": {
+      "width": 500,
+      "height": 650,
+      "backgroundColor": "#1a1a2e"
+    }
+  },
+  "dependencies": {
+    "hyperswarm": "^4.0.0",
+    "b4a": "^1.0.0"
+  },
+  "devDependencies": {
+    "brittle": "^3.0.0"
+  }
+}

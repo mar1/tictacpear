@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicTacPear</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>TicTacPear</h1>
+    <p class="subtitle">Peer-to-Peer TicTacToe</p>
+
+    <div id="connection-panel">
+      <div id="status" class="disconnected">Disconnected</div>
+
+      <div class="connection-section">
+        <h3>Host a Game</h3>
+        <button id="host-btn">Create Room</button>
+        <div id="room-code-display" class="hidden">
+          <p>Share this code:</p>
+          <code id="room-code"></code>
+          <button id="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="divider">OR</div>
+
+      <div class="connection-section">
+        <h3>Join a Game</h3>
+        <input type="text" id="join-input" placeholder="Enter room code">
+        <button id="join-btn">Join Room</button>
+      </div>
+    </div>
+
+    <div id="game-panel" class="hidden">
+      <div id="turn-indicator">Waiting for opponent...</div>
+      <div id="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      <div id="game-result" class="hidden"></div>
+      <button id="new-game-btn" class="hidden">New Game</button>
+      <button id="disconnect-btn">Leave Game</button>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

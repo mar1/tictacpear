@@ -1,10 +1,6 @@
-/* global Pear */
 import Hyperswarm from 'hyperswarm'
 import b4a from 'b4a'
 import crypto from 'hypercore-crypto'
-
-// Enable hot reload in development
-Pear.updates(() => Pear.reload())
 
 // Game state
 const state = {
@@ -391,6 +387,16 @@ async function disconnect() {
 
   updateStatus('disconnected', 'Disconnected')
 }
+
+// Cleanup on window close
+window.addEventListener('beforeunload', async () => {
+  if (state.peer) {
+    state.peer.destroy()
+  }
+  if (swarm) {
+    await swarm.destroy()
+  }
+})
 
 // Initialize app
 init()
